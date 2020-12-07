@@ -35,6 +35,19 @@ onRefInput = (input) => { this.input = input;}
 
 onChange = (e) => this.setState({ value: e.target.value });
 
+ componentDidMount() {
+     console.log("DidMount: 컴포넌트 렌더링 완료 후 1번만 실행 / 새로고침되면 다시 실행됨 어떤 경우 사용하는게 좋을까? 1.타이머(알림, 팝업, 전광판 회전 등)");
+ }
+
+ componentWillUnmount() {
+    console.log("WillUnmount: 컴포넌트가 DOM 상에서 제거될 때에 호출됩니다.");
+
+ }
+
+componentDidUpdate() {
+    console.log("DidUpdate: 컴포넌트가 업데이트 될때 마다 실행");
+
+}
 
    render() {
        return (

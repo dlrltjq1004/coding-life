@@ -7,10 +7,11 @@ const TimesTable = () => {
    const [value, setValue] = useState("");
    const [result, setResult] = useState("");
    const inputRef = useRef(null);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if(parseInt(value) === first * second) {
-        setResult((prevResult) => { return prevResult.value + " 정답"; });
+        setResult(value + " 정답");
         setFirst(Math.ceil(Math.random() * 9));
         setSecond(Math.ceil(Math.random() * 9));
         setValue("");
@@ -25,7 +26,7 @@ const TimesTable = () => {
 const onChange = (e) => { setValue(e.target.value); };
 
     return (
-        <>
+    <div>
         <h1 >구구단</h1>
          <p>{first} 곱하기 {second} 은?</p>
         <form onSubmit={handleSubmit}>
@@ -33,7 +34,7 @@ const onChange = (e) => { setValue(e.target.value); };
         <button>확인</button>               
         </form>
         <p>{result}</p>
-    </>
+    </div>
     );
 }
 

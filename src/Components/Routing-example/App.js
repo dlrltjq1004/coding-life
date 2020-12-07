@@ -4,7 +4,7 @@ import Games from "./Components/Routing-example/Games";
 import Tutorial from "./Components/Routing-example/Tutorial";
 
 
-function App2() {
+function App() {
   return (
       <HashRouter>
         <Route path="/" exact={true} component={Home} />
@@ -14,4 +14,4 @@ function App2() {
   );
 }
 
-export default App2;
+export default App;
